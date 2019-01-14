@@ -1,7 +1,7 @@
 import * as request from "request";
 
 export function send_message(event: any, context: any, callback: any) {
-    const url = 'https://hooks.slack.com/services/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';
+    const url = process.env.SLACK_WEBHOOK_URL;
     console.log("SLACK URL: ", url);
     const payload = {
         icon_emoji: ":ghost:",
